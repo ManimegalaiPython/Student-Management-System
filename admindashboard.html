@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLink Layout</title>
+
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/admindashboard.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <div class="logo">
+    <img src="images/logo.png" alt="EduLink Logo" class="logo-img">
+    <span>EduLink</span>
+</div>
+
+
+        <!-- Menu -->
+        <nav class="nav-menu">
+            <a href="admindashboard.html"class="active">Dashboard</a>
+            <a href="adminteacher.html">Teachers</a>
+            <a href="adminstudents.html">Students</a>
+            <a href="adminattendance.html">Attendance</a>
+            <a href="adminexam.html">Exams & Result</a>
+            <a href="adminfees.html">Fees</a>
+            <a href="adminsetting.html">Settings</a>
+        </nav>
+
+        <!-- Login Button -->
+<button class="login-btn" onclick="showLogin()">Login</button>
+
+    </div>
+
+<!-- LOGIN POPUP -->
+<div class="login-overlay" id="loginForm">
+    <div class="popup-box">
+        <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <select id="role">
+            <option value="">Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+        </select>
+
+        <button class="main-btn" onclick="goLogin()">Login</button>
+    </div>
+</div>
+
+</header>
+
+
+<!-- Dummy content space -->
+<div style="height:50px;"></div>
+<section class="dashboard">
+
+    <!-- Header -->
+    <div class="dashboard-header">
+        <div>
+            <h1>Dashboard</h1>
+            <p>Welcome back, Sarah! Here's a quick overview of your school's activities.</p>
+        </div>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats">
+        <div class="card">
+            <span>Total Students</span>
+            <h2>450</h2>
+        </div>
+
+        <div class="card">
+            <span>Total Teachers</span>
+            <h2>30</h2>
+        </div>
+
+        <div class="card">
+            <span>Classes</span>
+            <h2>15</h2>
+        </div>
+
+        <div class="card">
+            <span>Attendance %</span>
+            <h2>92%</h2>
+        </div>
+
+        <div class="card">
+            <span>Fees Status</span>
+            <h2>Paid</h2>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <h3 class="section-title">Quick Actions</h3>
+
+    <div class="actions">
+        <button onclick="actionClick('Add Student')" class="primary">Add Student</button>
+        <button onclick="actionClick('Mark Attendance')">Mark Attendance</button>
+        <button onclick="actionClick('View Reports')">View Reports</button>
+        <button onclick="actionClick('Add Teacher')">Add Teacher</button>
+        <button onclick="actionClick('Create Class')">Create Class</button>
+        <button onclick="actionClick('Generate Report')">Generate Report</button>
+    </div>
+
+   <!-- Recent Activities -->
+<h3 class="section-title">Recent Activities</h3>
+
+<div class="activities">
+
+    <div class="activity">
+        <div class="icon">
+            <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="content">
+            <strong>New student enrolled</strong>
+            <p>Sophia Clark enrolled in Class 10A</p>
+        </div>
+    </div>
+
+    <div class="activity">
+        <div class="icon">
+            <i class="fas fa-users"></i>
+        </div>
+        <div class="content">
+            <strong>Teacher added</strong>
+            <p>Mr. David Miller joined the faculty</p>
+        </div>
+    </div>
+
+    <div class="activity">
+        <div class="icon">
+            <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="content">
+            <strong>Class created</strong>
+            <p>Class 10B created</p>
+        </div>
+    </div>
+
+</div>
+
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Links -->
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright">
+            @2024 EduLink. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+<script>
+    lucide.createIcons();
+</script>
+
+<!-- ================= SCRIPT ================= -->
+
+  <script src="js/index.js"></script>
+<script src="js/admindashboard.js"></script>
+
+</body>
+</html>

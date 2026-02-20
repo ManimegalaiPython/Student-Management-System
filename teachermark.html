@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marks & Results</title>
+
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">    
+
+    <link rel="stylesheet" href="css/teachermark.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <div class="logo">
+    <img src="images/logo.png" alt="EduLink Logo" class="logo-img">
+    <span>EduLink</span>
+</div>
+
+
+        <!-- Menu -->
+        <nav class="nav-menu">
+            <a href="teacherdash.html">Dashboard</a>
+            <a href="teacherattendance.html">Attendance</a>
+            <a href="teachermark.html"class="active">Marks</a>
+            <a href="teacherclasses.html">Classes</a>
+            <a href="teacherreport.html">Report</a>
+            <a href="teacherprofile.html">Profile</a>
+        </nav>
+
+        <!-- Login Button -->
+<button class="login-btn" onclick="showLogin()">Login</button>
+
+    </div>
+
+ <!-- LOGIN POPUP -->
+<div class="login-overlay" id="loginForm">
+    <div class="popup-box">
+        <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <select id="role">
+            <option value="">Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+        </select>
+
+        <button class="main-btn" onclick="goLogin()">Login</button>
+    </div>
+</div>
+</header>
+
+
+
+<div class="container">
+
+    <h1>Marks & Results</h1>
+
+    <!-- Dropdowns -->
+    <select id="examSelect">
+        <option value="">Select Exam</option>
+        <option>Mid Term</option>
+        <option>Quarterly</option>
+        <option>Half Yearly</option>
+        <option>Final Exam</option>
+    </select>
+
+    <select id="classSubjectSelect">
+        <option value="">Select Class & Subject</option>
+        <option>Class 10 - Mathematics</option>
+        <option>Class 11 - Physics</option>
+        <option>Class 12 - Chemistry</option>
+    </select>
+
+    <!-- Table -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Roll No.</th>
+                    <th>Marks</th>
+                    <th>Total / Grade</th>
+                </tr>
+            </thead>
+
+            <tbody id="marksTable">
+
+                <tr><td>Liam Harper</td><td>101</td><td><input type="number" value="85" disabled></td><td class="grade">A</td></tr>
+                <tr><td>Olivia Bennett</td><td>102</td><td><input type="number" value="92" disabled></td><td class="grade">A+</td></tr>
+                <tr><td>Noah Carter</td><td>103</td><td><input type="number" value="78" disabled></td><td class="grade">B</td></tr>
+                <tr><td>Emma Hayes</td><td>104</td><td><input type="number" value="88" disabled></td><td class="grade">A</td></tr>
+                <tr><td>Jackson Reed</td><td>105</td><td><input type="number" value="95" disabled></td><td class="grade">A+</td></tr>
+                <tr><td>Ava Morgan</td><td>106</td><td><input type="number" value="72" disabled></td><td class="grade">C</td></tr>
+                <tr><td>Aiden Foster</td><td>107</td><td><input type="number" value="80" disabled></td><td class="grade">B</td></tr>
+                <tr><td>Chloe Evans</td><td>108</td><td><input type="number" value="90" disabled></td><td class="grade">A</td></tr>
+                <tr><td>Lucas Parker</td><td>109</td><td><input type="number" value="65" disabled></td><td class="grade">D</td></tr>
+                <tr><td>Sophia Hughes</td><td>110</td><td><input type="number" value="82" disabled></td><td class="grade">B</td></tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-group">
+        <button class="btn-primary" onclick="saveMarks()">Save Marks</button>
+        <button class="btn-secondary" onclick="editMarks()">Edit Marks</button>
+    </div>
+
+    <div class="submit-section">
+        <button class="btn-primary" onclick="submitApproval()">Submit for Approval</button>
+    </div>
+
+</div>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Links -->
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright">
+            @2024 EduLink. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+<script>
+    lucide.createIcons();
+</script>
+
+<!-- ================= SCRIPT ================= -->
+
+  <script src="js/index.js"></script>
+<script src="js/teachermark.js.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduLink Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+ <!-- External CSS -->
+    <link rel="stylesheet" href="css/index.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<div class="navbar">
+    <div class="logo-section">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h2>EduLink</h2>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="feature.html">Features</a>
+        <a href="contact.html">Contact</a>
+       <button class="login-btn" onclick="showLogin()">Login</button>
+    </div>
+</div>
+
+<!-- LOGIN POPUP -->
+<div class="login-overlay" id="loginForm">
+    <div class="popup-box">
+        <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <select id="role">
+            <option value="">Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+        </select>
+
+        <button class="main-btn" onclick="goLogin()">Login</button>
+    </div>
+</div>
+
+
+
+<!-- ================= HERO SECTION ================= -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>Smart Student Management Made Simple</h1>
+        <p>Manage students, attendance, exams, and fees easily with one powerful system.</p>
+<button class="btn" onclick="showLogin()">Get Started</button>
+    </div>
+</div>
+
+
+<!-- ================= ADVANTAGES SECTION ================= -->
+
+
+<section class="advantages">
+    <div class="advantages-header">
+        <h2>Our System's Advantages</h2>
+        <p>
+            Discover the benefits of using our student management system to streamline 
+            your academic administration and improve communication.
+        </p>
+    </div>
+
+    <div class="advantages-grid">
+
+        <div class="card">
+            <i data-lucide="users"></i>
+            <h3>Centralized Student Data</h3>
+            <p>Keep all student information in one place for easy access and management.</p>
+        </div>
+
+        <div class="card">
+            <i data-lucide="calendar"></i>
+            <h3>Easy Attendance</h3>
+            <p>Streamline attendance tracking with digital tools and automated reports.</p>
+        </div>
+
+        <div class="card">
+            <i data-lucide="bar-chart-3"></i>
+            <h3>Accurate Exam Management</h3>
+            <p>Manage exams, results, and grading efficiently with automated processes.</p>
+        </div>
+
+        <div class="card">
+            <i data-lucide="dollar-sign"></i>
+            <h3>Transparent Fee Monitoring</h3>
+            <p>Monitor fee payments, track outstanding balances, and generate reports.</p>
+        </div>
+
+        <div class="card">
+            <i data-lucide="shield-check"></i>
+            <h3>Role-Based Access</h3>
+            <p>Control access levels for different users, ensuring data security and privacy.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= MODULES SECTION ================= -->
+
+<section class="modules">
+    <div class="modules-header">
+        <h2>Explore Our Modules</h2>
+        <p>
+            Our system offers a range of modules to cover all aspects of student management, 
+            from admissions to reporting.
+        </p>
+    </div>
+
+    <div class="modules-grid">
+
+        <div class="card">
+            <i data-lucide="users"></i>
+            <h3>Student Management</h3>
+            <p>Manage student records, admissions, and profiles efficiently.</p>
+        </div>
+
+        <div class="card">
+            <i data-lucide="calendar"></i>
+            <h3>Attendance Management</h3>
+            <p>Track student attendance, generate reports, and monitor trends.</p>
+        </div>
+
+        <div class="card">
+            <i data-lucide="bar-chart-3"></i>
+            <h3>Exams & Results</h3>
+            <p>Create exams, publish results, and manage grading systems.</p>
+        </div>
+
+        <div class="card">
+            <i data-lucide="dollar-sign"></i>
+            <h3>Fees Management</h3>
+            <p>Manage fee structures, track payments, and generate financial reports.</p>
+        </div>
+
+        <div class="card">
+            <i data-lucide="user-check"></i>
+            <h3>Teacher Management</h3>
+            <p>Manage teacher profiles, schedules, and assignments.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Links -->
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright">
+            @2024 EduLink. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+</script>
+
+<!-- ================= SCRIPT ================= -->
+
+  <script src="js/index.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+     <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/adminstudents.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <div class="logo">
+    <img src="images/logo.png" alt="EduLink Logo" class="logo-img">
+    <span>EduLink</span>
+</div>
+
+
+        <!-- Menu -->
+        <nav class="nav-menu">
+            <a href="admindashboard.html">Dashboard</a>
+            <a href="adminteacher.html">Teachers</a>
+            <a href="adminstudents.html"class="active">Students</a>
+            <a href="adminattendance.html">Attendance</a>
+            <a href="adminexam.html">Exams & Result</a>
+            <a href="adminfees.html">Fees</a>
+            <a href="adminsetting.html">Settings</a>
+        </nav>
+
+        <!-- Login Button -->
+<button class="login-btn" onclick="showLogin()">Login</button>
+
+    </div>
+
+<!-- LOGIN POPUP -->
+<div class="login-overlay" id="loginForm">
+    <div class="popup-box">
+        <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <select id="role">
+            <option value="">Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+        </select>
+
+        <button class="main-btn" onclick="goLogin()">Login</button>
+    </div>
+</div>
+
+</header>
+<div class="container">
+
+    <div class="header">
+        <h2>Students</h2>
+        <button id="addStudentBtn">Add New Student</button>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Roll No</th>
+                    <th>Class</th>
+                    <th>Section</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody">
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Links -->
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright">
+            @2024 EduLink. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+<script>
+    lucide.createIcons();
+</script>
+
+<!-- ================= SCRIPT ================= -->
+
+  <script src="js/index.js"></script>
+<script src="js/adminstudents.js"></script>
+</body>
+</html>

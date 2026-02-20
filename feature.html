@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Features</title>
+
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/feature.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<div class="navbar">
+    <div class="logo-section">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h2>EduLink</h2>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="feature.html" class="active">Features</a>
+        <a href="contact.html">Contact</a>
+       <button class="login-btn" onclick="showLogin()">Login</button>
+    </div>
+</div>
+
+<!-- LOGIN POPUP -->
+<div class="login-overlay" id="loginForm">
+    <div class="popup-box">
+        <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <select id="role">
+            <option value="">Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+        </select>
+
+        <button class="main-btn" onclick="goLogin()">Login</button>
+    </div>
+</div>
+
+<section class="features-section">
+    <div class="container">
+
+        <h1 class="main-title">Key Features</h1>
+
+        <p class="subtitle">
+            Explore the core functionalities of our Student Management System designed to streamline academic administration and enhance communication within educational institutions.
+        </p>
+
+        <!-- Feature 1 -->
+        <div class="feature-block">
+            <h2 class="feature-title">Student Management</h2>
+            <p class="feature-text">
+                Efficiently manage student records, including personal details, enrollment history, and academic progress. Easily search, filter, and update student information.
+            </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-block">
+            <h2 class="feature-title">Attendance Tracking</h2>
+            <p class="feature-text">
+                Monitor student attendance with a user-friendly interface. Generate attendance reports and identify students with attendance issues.
+            </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-block">
+            <h2 class="feature-title">Exams & Results</h2>
+            <p class="feature-text">
+                Manage exams, schedule assessments, and publish results seamlessly. Provide students with access to their exam schedules and results.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- Feature 4 -->
+<div class="feature-block">
+    <h2 class="feature-title">Fees Management</h2>
+    <p class="feature-text">
+        Track and manage student fees, including payment history and outstanding balances. Generate fee reports and send reminders for overdue payments.
+    </p>
+</div>
+
+<!-- Feature 5 -->
+<div class="feature-block">
+    <h2 class="feature-title">Teacher Management</h2>
+    <p class="feature-text">
+        Manage teacher profiles, including contact information, qualifications, and assigned courses. Facilitate communication between teachers and administrators.
+    </p>
+</div>
+
+<!-- Feature 6 -->
+<div class="feature-block">
+    <h2 class="feature-title">Reports & Analytics</h2>
+    <p class="feature-text">
+        Generate comprehensive reports on student performance, attendance, fees, and other key metrics. Gain insights into institutional performance with visual analytics.
+    </p>
+</div>
+
+<!-- Feature 7 -->
+<div class="feature-block">
+    <h2 class="feature-title">Role-Based Access</h2>
+    <p class="feature-text">
+        Control access to different features based on user roles, such as administrator, teacher, or student. Ensure data security and privacy with granular access controls.
+    </p>
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Links -->
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright">
+            @2024 EduLink. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+</script>
+
+<!-- ================= SCRIPT ================= -->
+
+  <script src="js/index.js"></script>
+
+</body>
+</html>

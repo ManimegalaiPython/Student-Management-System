@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/studentdashboard.css">
+</head>
+<body>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">    
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <div class="logo">
+    <img src="images/logo.png" alt="EduLink Logo" class="logo-img">
+    <span>EduLink</span>
+</div>
+
+
+        <!-- Menu -->
+        <nav class="nav-menu">
+            <a href="studentdashboard.html"class="active">Dashboard</a>
+            <a href="studentattendance.html">Attendance</a>
+            <a href="studentresult.html">Result</a>
+            <a href="studentfee.html">Fees</a>
+            <a href="studentprofile.html">Profile</a>
+        </nav>
+
+        <!-- Login Button -->
+<button class="login-btn" onclick="showLogin()">Login</button>
+
+    </div>
+<!-- LOGIN POPUP -->
+<div class="login-overlay" id="loginForm">
+    <div class="popup-box">
+        <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <select id="role">
+            <option value="">Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+        </select>
+
+        <button class="main-btn" onclick="goLogin()">Login</button>
+    </div>
+</div>
+
+</header>
+<section class="student-container">
+  <h1>Student Dashboard</h1>
+  <p class="subtitle">
+    Welcome back, Sarah! Here's a summary of your academic progress.
+  </p>
+
+  <!-- Cards -->
+  <div class="card-container">
+    <div class="card">
+      <h3>Attendance</h3>
+      <div class="value">92%</div>
+      <span class="positive">+2%</span>
+    </div>
+
+    <div class="card">
+      <h3>Overall Grade</h3>
+      <div class="value">A</div>
+      <span class="negative">-1%</span>
+    </div>
+
+    <div class="card">
+      <h3>Fees Due</h3>
+      <div class="value">$0</div>
+      <span class="neutral">0%</span>
+    </div>
+  </div>
+
+  <!-- Quick Actions -->
+  <h2 class="section-title">Quick Actions</h2>
+
+  <div class="buttons">
+    <button class="primary-btn" onclick="goToAttendance()">View Attendance</button>
+    <button class="secondary-btn" onclick="goToResults()">View Results</button>
+  </div>
+
+  <!-- Academic Overview -->
+  <h2 class="section-title">Academic Overview</h2>
+
+  <div class="overview">
+
+    <!-- CLICKABLE ATTENDANCE SECTION -->
+    <div class="overview-text clickable" onclick="goToAttendance()">
+      <small>Attendance</small>
+      <h4>Attendance Percentage</h4>
+      <p>Your attendance rate is currently at 92%. Keep up the good work!</p>
+    </div>
+
+    <div class="image-box">
+      <img src="images/image1.jpg" alt="Student">
+    </div>
+
+    </div>
+
+
+    <!-- Grades Section -->
+<div class="info-section clickable" onclick="goToResults()">
+  <div class="info-text">
+    <small>Grades</small>
+    <h4>Exam Results and Grades</h4>
+    <p>Check your latest exam results and grades for all your courses.</p>
+  </div>
+  <div class="info-image">
+    <img src="images/image2.jpg" alt="Grades">
+  </div>
+</div>
+
+<!-- Fees Section -->
+<div class="info-section clickable" onclick="goToFees()">
+  <div class="info-text">
+    <small>Fees</small>
+    <h4>Fee Payment Status</h4>
+    <p>Your fee payment status is up to date. No outstanding fees.</p>
+  </div>
+  <div class="info-image">
+    <img src="images/image3.jpg" alt="Fees">
+  </div>
+</div>
+
+<!-- Report Card Section -->
+<div class="info-section clickable" onclick="goToReport()">
+  <div class="info-text">
+    <small>Report Card</small>
+    <h4>Download Report Card</h4>
+    <p>Download your latest report card for a detailed overview of your academic performance.</p>
+  </div>
+  <div class="info-image">
+    <img src="images/image4.jpg" alt="Report Card">
+  </div>
+</div>
+
+<!-- Profile Management -->
+
+<div class="info-section clickable" onclick="goToProfile()">
+  <div class="info-text">
+    <h2 class="section-title profile-title">Profile Management</h2>
+
+    <h4>Update Personal Profile</h4>
+    <p>Keep your personal information current by updating your profile.</p>
+  </div>
+  <div class="info-image">
+    <img src="images/image5.jpg" alt="Profile">
+  </div>
+</div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Links -->
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright">
+            @2024 EduLink. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+<script>
+    lucide.createIcons();
+</script>
+
+<!-- ================= SCRIPT ================= -->
+
+  <script src="js/index.js"></script>
+  <script src="js/studentdashboard.js"></script>
+</body>
+</html>

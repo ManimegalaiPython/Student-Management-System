@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  
+    <link rel="stylesheet" href="css/teacherprofile.css">
+</head>
+<body>
+    <!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <div class="logo">
+    <img src="images/logo.png" alt="EduLink Logo" class="logo-img">
+    <span>EduLink</span>
+</div>
+
+
+        <!-- Menu -->
+        <nav class="nav-menu">
+            <a href="teacherdash.html">Dashboard</a>
+            <a href="teacherattendance.html">Attendance</a>
+            <a href="teachermark.html">Marks</a>
+            <a href="teacherclasses.html">Classes</a>
+            <a href="teacherreport.html">Report</a>
+            <a href="teacherprofile.html"class="active">Profile</a>
+        </nav>
+
+        <!-- Login Button -->
+<button class="login-btn" onclick="showLogin()">Login</button>
+
+    </div>
+<!-- LOGIN POPUP -->
+<div class="login-overlay" id="loginForm">
+    <div class="popup-box">
+        <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <select id="role">
+            <option value="">Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+        </select>
+
+        <button class="main-btn" onclick="goLogin()">Login</button>
+    </div>
+</div>
+</header>
+
+
+
+<div class="container">
+
+<h1>My Profile</h1>
+
+<!-- Basic Details -->
+<h2>Name & Employee ID</h2>
+<div class="row">
+    <div class="field">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter name" disabled>
+    </div>
+
+    <div class="field">
+        <label>Employee ID</label>
+        <input type="text" id="empId" placeholder="Enter ID" disabled>
+    </div>
+</div>
+
+<!-- Assigned Classes -->
+<h2>Assigned Classes & Subjects</h2>
+
+<div class="row">
+    <div class="field">
+        <label>Class</label>
+        <input type="text" id="class1" placeholder="Enter class" disabled>
+    </div>
+
+    <div class="field">
+        <label>Subject</label>
+        <input type="text" id="subject1" placeholder="Enter subject" disabled>
+    </div>
+</div>
+
+<div class="row">
+    <div class="field">
+        <label>Class</label>
+        <input type="text" id="class2" placeholder="Enter class" disabled>
+    </div>
+
+    <div class="field">
+        <label>Subject</label>
+        <input type="text" id="subject2" placeholder="Enter subject" disabled>
+    </div>
+</div>
+
+<!-- Contact -->
+<h2>Contact Details</h2>
+<div class="row">
+    <div class="field">
+        <label>Email</label>
+        <input type="email" id="profileEmail" placeholder="Enter email" disabled>
+    </div>
+
+    <div class="field">
+        <label>Phone</label>
+        <input type="text" id="phone" placeholder="Enter phone" disabled>
+    </div>
+</div>
+
+<!-- Buttons -->
+<div class="button-group">
+    <button class="btn primary" onclick="editProfile()">Edit Profile</button>
+    <button class="btn light" onclick="changePassword()">Change Password</button>
+    <button class="btn dark" onclick="logout()">Logout</button>
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Links -->
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright">
+            @2024 EduLink. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+<script>
+    lucide.createIcons();
+</script>
+
+<!-- ================= SCRIPT ================= -->
+
+  <script src="js/index.js"></script>
+<script src="js/teacherprofile.js"></script>
+</body>
+</html>

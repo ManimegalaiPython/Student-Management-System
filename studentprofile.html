@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">    
+
+<link rel="stylesheet" href="css/studentprofile.css">
+</head>
+
+<body>
+  
+   
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <div class="logo">
+    <img src="images/logo.png" alt="EduLink Logo" class="logo-img">
+    <span>EduLink</span>
+</div>
+
+
+            <!-- Menu -->
+        <nav class="nav-menu">
+            <a href="studentdashboard.html">Dashboard</a>
+            <a href="studentattendance.html">Attendance</a>
+            <a href="studentresult.html">Result</a>
+            <a href="studentfee.html">Fees</a>
+            <a href="studentprofile.html"class="active">Profile</a>
+        </nav>
+
+        <!-- Login Button -->
+<button class="login-btn" onclick="showLogin()">Login</button>
+
+    </div>
+
+<!-- LOGIN POPUP -->
+<div class="login-overlay" id="loginForm">
+    <div class="popup-box">
+        <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <select id="role">
+            <option value="">Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+        </select>
+
+        <button class="main-btn" onclick="goLogin()">Login</button>
+    </div>
+</div>
+
+</header>
+
+
+<div class="container">
+
+  <h1>My Profile</h1>
+
+  <!-- Personal Info -->
+  <h3>Personal Information</h3>
+  <div class="info-row">
+    <div>
+      <label>Student Name</label>
+      <p id="nameText">Ethan Harper</p>
+    </div>
+    <div>
+      <label>Roll Number</label>
+      <p>2023-SH-1234</p>
+    </div>
+    <div>
+      <label>Class & Section</label>
+      <p>Grade 10 - A</p>
+    </div>
+  </div>
+
+  <h3>Contact Details</h3>
+  <div class="info-row">
+    <div>
+      <label>Email</label>
+      <p id="emailText">ethan.harper@example.com</p>
+    </div>
+    <div>
+      <label>Phone Number</label>
+      <p id="phoneText">+1 (555) 123-4567</p>
+    </div>
+  </div>
+
+  <h3>Actions</h3>
+
+  <div class="action-card" onclick="toggleEdit()">
+    <span>Edit Profile (Limited)</span>
+    <i class="fa-solid fa-pen"></i>
+  </div>
+
+  <div class="action-card" onclick="togglePassword()">
+    <span>Change Password</span>
+    <i class="fa-solid fa-lock"></i>
+  </div>
+
+  <div class="action-card" onclick="logout()">
+    <span>Logout</span>
+    <i class="fa-solid fa-right-from-bracket"></i>
+  </div>
+
+  <!-- EDIT FORM -->
+  <div id="editForm" class="form-box hidden">
+    <h4>Edit Profile</h4>
+    <input type="text" id="editName">
+    <input type="email" id="editEmail">
+    <input type="text" id="editPhone">
+    <button onclick="saveProfile()">Save Changes</button>
+  </div>
+
+  <!-- PASSWORD FORM -->
+  <div id="passwordForm" class="form-box hidden">
+    <h4>Change Password</h4>
+    <input type="password" id="currentPass" placeholder="Current Password">
+    <input type="password" id="newPass" placeholder="New Password">
+    <input type="password" id="confirmPass" placeholder="Confirm Password">
+    <button onclick="updatePassword()">Update Password</button>
+  </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Links -->
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright">
+            @2024 EduLink. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+<script>
+    lucide.createIcons();
+</script>
+
+<!-- ================= SCRIPT ================= -->
+
+  <script src="js/index.js"></script>
+<script src="js/studentprofile.js"></script>
+</body>
+</html>

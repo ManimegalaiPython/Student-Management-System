@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fees Details</title>
+
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+  
+  <link rel="stylesheet" href="css/studentfee.css">
+</head>
+<body>
+
+       
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <div class="logo">
+    <img src="images/logo.png" alt="EduLink Logo" class="logo-img">
+    <span>EduLink</span>
+</div>
+
+
+         <!-- Menu -->
+        <nav class="nav-menu">
+            <a href="studentdashboard.html">Dashboard</a>
+            <a href="studentattendance.html">Attendance</a>
+            <a href="studentresult.html">Result</a>
+            <a href="studentfee.html"class="active">Fees</a>
+            <a href="studentprofile.html">Profile</a>
+        </nav>
+
+        <!-- Login Button -->
+<button class="login-btn" onclick="showLogin()">Login</button>
+
+    </div>
+
+<!-- LOGIN POPUP -->
+<div class="login-overlay" id="loginForm">
+    <div class="popup-box">
+        <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+
+        <select id="role">
+            <option value="">Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+        </select>
+
+        <button class="main-btn" onclick="goLogin()">Login</button>
+    </div>
+</div>
+</header>
+
+
+  <div class="container">
+
+    <h1>Fees Details</h1>
+
+    <!-- Fee Cards -->
+    <div class="cards">
+
+      <div class="card">
+        <p>Total Fees</p>
+        <h2>$12,000</h2>
+      </div>
+
+      <div class="card">
+        <p>Paid Amount</p>
+        <h2>$8,000</h2>
+      </div>
+
+      <div class="card">
+        <p>Pending Amount</p>
+        <h2>$4,000</h2>
+      </div>
+
+      <div class="card">
+        <p>Due Date</p>
+        <h2>July 31, 2024</h2>
+      </div>
+
+    </div>
+
+    <!-- Buttons Row -->
+    <div class="button-row">
+      <button class="light-btn" onclick="viewHistory()">View Payment History</button>
+      <button class="dark-btn" onclick="downloadReceipt()">Download Receipt</button>
+    </div>
+
+    <!-- Pay Now Button -->
+    <div class="pay-section">
+      <button class="dark-btn pay-btn" onclick="payNow()">Pay Now</button>
+    </div>
+
+  </div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Links -->
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright">
+            @2024 EduLink. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+<script>
+    lucide.createIcons();
+</script>
+
+<!-- ================= SCRIPT ================= -->
+
+  <script src="js/index.js"></script>
+  <script src="js/studentfee.js"></script>
+
+</body>
+</html>
