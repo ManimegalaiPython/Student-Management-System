@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  padding: 40px;
+}
+
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+.student-info {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #e5e7eb;
+}
+
+.total-section {
+  margin-bottom: 30px;
+}
+
+.pass {
+  background: #4caf50;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 6px;
+}
+
+.button-section {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: #1f4e79;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Hide buttons while printing */
+@media print {
+  .button-section {
+    display: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  .container {
+    box-shadow: none;
+  }
+}
+
+
+/* ===================================== */
+/*           RESPONSIVE MEDIA            */
+/* ===================================== */
+
+
+/* ===== Large Tablets (1024px) ===== */
+@media (max-width: 1024px) {
+
+  body {
+    padding: 30px;
+  }
+
+  .container {
+    max-width: 90%;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  th, td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+
+/* ===== Tablets (768px) ===== */
+@media (max-width: 768px) {
+
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .student-info p {
+    font-size: 14px;
+  }
+
+  /* Table scroll if content is large */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    font-size: 13px;
+  }
+
+  /* Buttons stack */
+  .button-section {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+
+/* ===== Mobile Devices (480px) ===== */
+@media (max-width: 480px) {
+
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .student-info p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .pass {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+
+/* ===== Print (Already exists – improved) ===== */
+@media print {
+
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .container {
+    box-shadow: none;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .button-section {
+    display: none;
+  }
+}

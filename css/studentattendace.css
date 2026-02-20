@@ -1,0 +1,486 @@
+body {
+    font-family: inter, sans-serif;
+    background-color: #f2f3f5;
+    margin: 0;
+}
+
+
+
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    padding: 12px 5px;
+
+    position: fixed;      /* Make navbar fixed */
+    top: 0;               /* Stick to top */
+    left: 0;
+    width: 100%;          /* Full width */
+    z-index: 1000;        /* Stay above other content */
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* IMPORTANT */
+    padding: 15px 60px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.logo-img {
+    width: 28px;
+}
+
+/* Menu */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;  /* pushes menu to right */
+}
+
+
+.nav-menu a {
+    position: relative;
+    text-decoration: none;
+    color: #374151;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.nav-menu a:hover {
+    color: #2563eb;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+/* Login Button */
+.login-btn {
+    padding: 10px 24px;
+    background: #1e3a5f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+   font-size: 18px;
+    margin-left: 25px;
+}
+
+
+
+/* ================= LOGIN POPUP ================= */
+
+.login-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+}
+
+.popup-box{
+    width:35%;
+    background:#181818;
+    padding:40px;
+    border-radius:15px;
+    position:relative;
+}
+
+.close-btn{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:28px;
+    cursor:pointer;
+    color: #d1d5db;
+}
+
+.popup-box input,
+.popup-box select{
+    width:100%;
+    padding:18px;
+    margin:20px 0;
+    border-radius:12px;
+    border:none;
+    font-size:16px;
+    background:#d9d9d9;
+}
+
+.main-btn{
+    width:100%;
+    padding:15px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    color:#fff;
+    background:linear-gradient(to right,#2b6cb0,#0f3057);
+    cursor:pointer;
+}
+
+
+.container {
+    padding: 60px;
+        width: 80%;
+        margin-top: 50px;
+
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+select, input[type="date"] {
+    width: 50%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #6b8db3;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 16px;
+}
+
+.table-container {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #4a6fa5;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+table {
+    width:100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #d9dde2;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+}
+
+td:nth-child(2) {
+    color: #3b6ea5;
+}
+
+tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+.button-group {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #2b6cb0, #1e3a5f);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+    
+}
+
+.btn-secondary {
+    background-color: #d1d5db;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+        font-size: 16px;
+
+}
+
+
+
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #4f7093;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #e5e7eb;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+
+/* ===================================== */
+/*            MEDIA QUERIES              */
+/* ===================================== */
+
+
+/* ====== Tablets (1024px) ====== */
+@media (max-width: 1024px) {
+
+    .nav-container {
+        padding: 15px 30px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .nav-menu a {
+        font-size: 16px;
+    }
+
+    .login-btn {
+        font-size: 16px;
+        padding: 8px 18px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 40px;
+    }
+
+    select,
+    input[type="date"] {
+        width: 70%;
+        padding: 16px;
+    }
+
+    .popup-box {
+        width: 50%;
+    }
+
+    .footer-links {
+        gap: 40px;
+    }
+}
+
+
+/* ====== Tablets / Small screens (768px) ====== */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 15px;
+    }
+
+    .login-btn {
+        font-size: 15px;
+        padding: 8px 16px;
+    }
+
+    /* Container */
+    .container {
+        width: 95%;
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Form fields */
+    select,
+    input[type="date"] {
+        width: 100%;
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    /* Table scroll */
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    /* Buttons */
+    .button-group {
+        text-align: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        margin-top: 10px;
+    }
+
+    /* Popup */
+    .popup-box {
+        width: 70%;
+        padding: 30px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+
+/* ====== Mobile (480px) ====== */
+@media (max-width: 480px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo-img {
+        width: 22px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    .login-btn {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Container spacing */
+    .container {
+        margin-top: 120px;
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    /* Inputs */
+    select,
+    input[type="date"] {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    /* Buttons stacked */
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    /* Popup */
+    .popup-box {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .popup-box input,
+    .popup-box select {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .main-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
