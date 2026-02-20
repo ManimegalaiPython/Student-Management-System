@@ -17,6 +17,7 @@ function actionClick(action) {
         window.location.href = "adminteacher.html";
     }
     if (action === "View Reports") {
-        window.location.href = "reports.html";
+        window.location.href = "teacherreport.html";
     }
 }
+
